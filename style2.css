@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  transition: background-color 0.5s ease;
+}
+
+.light {
+  background: #f5f5f7;
+  color: #000;
+}
+
+.dark {
+  background: #2b2b2b;
+  color: #fff;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  color: #000;
+  padding: 3px;
+}
+
+nav img {
+  height: 2rem;
+  position: absolute;
+  left: 5px;
+  top: 0;
+}
+
+/* darl light btn */
+.checkbox {
+  height: 20px;
+  width: 40px;
+  background: #fff;
+  appearance: none;
+  border-radius: 16px;
+  box-shadow: inset 0 8px 60px #00000031, inset 0 8px 8px #00000031,
+    inset 0 -4px 60px #00000031;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.checkbox::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #504f4f;
+  border-radius: 160px;
+  transform: scale(0.9);
+  transition: 0.5s;
+}
+
+.checkbox:checked {
+  background: #3a3a3a;
+  box-shadow: inset 0 2px 50px #00000015, inset 0 2px 8px #00000015,
+    inset 0 -4px 4px #00000007;
+}
+
+.checkbox:checked::before {
+  left: 20px;
+  box-shadow: 0 8px 20px #00000010, inset 4-x 4-x #ffffffb9,
+    inset -4px 4px #ffffffb9;
+  background: #f9f9f9;
+}
+
+main {
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin-top: 4rem;
+}
+
+main .heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+main .heading #specialFont {
+  font-family: "Caveat", cursive;
+  font-size: 3rem;
+}
+
+main .heading p {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+main .heading h2 {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+main .heading span {
+  font-size: 2rem;
+}
+
+main .container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+}
+
+main .container .box {
+  min-height: 20vh;
+  width: 30vw;
+  background: #fff;
+  color: #000;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .container .box h3 {
+  margin: 1rem;
+}
+
+main .container .box img {
+  height: auto;
+  width: 100%;
+}
+
+main .container .box p {
+  margin-bottom: 1rem;
+}
+
+/* =======FOOTER============= */
+footer {
+  min-height: 30vh;
+  background: #1b1e33;
+  padding: 1rem;
+  color: #fff;
+}
+
+footer a {
+  color: #d0afe6;
+  text-decoration: none;
+}
+
+footer .upper {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+footer .upper div {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+footer .upper .upper1 {
+  align-items: center;
+}
+
+footer .upper .upper1 img {
+  height: 100px;
+  filter: invert(100%);
+}
+
+footer .upper .upper1 .social {
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  gap: 2rem;
+}
+
+footer .upper .upper1 .social img {
+  height: 2rem;
+}
+
+footer .upper .upper1 h1 {
+  font-size: 1.4rem;
+}
+
+footer .upper .upper2 p {
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+footer .upper .upper2 h3 {
+  font-size: 1.3rem;
+}
+
+footer .upper .upper3 h3 {
+  margin-top: 1rem;
+}
+
+footer .upper .upper3 span {
+  color: #ecaf69;
+}
+
+footer .lower {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1025px) {
+  main .container {
+    grid-template-columns: auto auto;
+  }
+
+  main .container .box {
+    width: 40vw;
+  }
+
+  footer .upper {
+    display: block;
+  }
+
+  footer .upper div {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav h1 {
+    font-size: 1rem;
+  }
+
+  main .container {
+    grid-template-columns: auto;
+  }
+
+  main .container .box {
+    width: 80vw;
+  }
+}
